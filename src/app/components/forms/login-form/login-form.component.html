@@ -1,0 +1,15 @@
+<div class="login-container">
+    <h2>Login</h2>
+    <form [formGroup]="loginForm">
+        <div class="input-group">
+            <label for="email">Email</label>
+            <input type="email" formControlName="email" name="email">
+        </div>
+        <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" formControlName="password" name="password">
+        </div>
+        <button (click)="emitLoginFormData()">Sign In</button>
+        <p>New to RPG Helper? <a (click)="emitChangeForm()" class="register-link">Create an account</a></p>
+    </form>
+</div>

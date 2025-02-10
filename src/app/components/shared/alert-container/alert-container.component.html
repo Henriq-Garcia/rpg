@@ -1,0 +1,7 @@
+@for (alert of alerts$ | async ; track $index) {
+    <div [ngClass]="['alert', alert.type]">
+        <span>{{ alert.message }}</span>
+        <button class="close-btn" (click)="removeAlert(alert.id)">×</button>
+        </div>
+}
+  
