@@ -1,13 +1,13 @@
 :host {
-  position: fixed; /* Mantém os alertas fixos na tela */
+  position: fixed;
   top: 20px;
   right: 20px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  z-index: 1000; /* Garante que o alerta fique acima dos outros elementos */
-  max-height: 100vh; /* Evita que os alertas causem overflow na tela */
-  overflow-y: auto; /* Permite rolagem se houver muitos alertas */
+  z-index: 1000;
+  max-height: 100vh;
+  overflow-y: hidden;
   padding-right: 10px;
 }
 
