@@ -45,12 +45,12 @@ export class RegisterFormComponent {
   protected registerFormData = output<CreateUserPayload>(); 
 
   protected emitRegisterFormData() {
-    const { confirmPassword, password } = this.registerForm.value;
-    if (confirmPassword !== password) {
+    if (this.registerForm.value.confirmPassword !== this.registerForm.value.password) {
       this.errors.push('Passwords does not match')
       return
     }
-    this.registerFormData.emit(this.registerForm.value as CreateUserPayload)
+    const { confirmPassword, ...payload } = this.registerForm.value
+    this.registerFormData.emit(payload as CreateUserPayload)
   }
 
   protected emitChangeForm(){

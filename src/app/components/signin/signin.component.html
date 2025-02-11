@@ -1,5 +1,5 @@
 @if (activeForm == "login") {
-    <app-login-form (changeForm)="onChangeActiveForm($event)" (loginFormData)="login()"/>
+    <app-login-form (changeForm)="onChangeActiveForm($event)" (loginFormData)="login($event)"/>
 } @else {
-    <app-register-form (changeForm)="onChangeActiveForm($event)"/>
+    <app-register-form (changeForm)="onChangeActiveForm($event)" (registerFormData)="register($event)"/>
 }
