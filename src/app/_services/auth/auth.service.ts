@@ -23,4 +23,9 @@ export class AuthService {
       } 
     });
   }
+
+  validateToken(token: string, type: "token" | "refresh") {
+    if (type == "token") return this.http.post<{ valid: boolean }>(`${this.base}/auth/is-valid`, {}, { headers: { 'Authorization': token } });
+    else return this.http.post<{ valid: boolean }>(`${this.base}/auth/is-valid`, {}, { headers: { 'x-refresh-token': token } });
+  }
 }

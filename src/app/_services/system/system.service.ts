@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { GetSystemResponse } from '../../_dto/system/system';
 
 @Injectable({
   providedIn: 'root'
@@ -10,5 +11,7 @@ export class SystemService {
 
   constructor(private readonly http: HttpClient) { }
 
-
+  listSystems() {
+    return this.http.get<GetSystemResponse[]>(`${this.base}/system`)
+  }
 }

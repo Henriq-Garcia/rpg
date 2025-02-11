@@ -36,6 +36,7 @@ export class SigninComponent {
         localStorage.setItem("token", value.token);
         localStorage.setItem("refresh", value.refreshToken)
         this.alertService.addAlert("Connecting", "success")
+        this.router.navigate([""])
       },
       (error) => {
         this.alertService.addAlert("Invalid credentials", "error")
