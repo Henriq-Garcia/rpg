@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class AuthService {
 
-  private base = 'https://rpg-api-7ouf.onrender.com';
+  private base = 'http://localhost:5050';
 
   constructor(private readonly http: HttpClient) { }
 
